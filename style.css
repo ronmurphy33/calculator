@@ -1,7 +1,66 @@
-#calculator{
-    border: 2px solid red;
+*{
+    font-family: "JetBrains Mono",monospace;
+    font-size: 20px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #403B4A, #E7E9BB);
 }
 
-.btn{
-    border-radius: 50%;
+#calculator{
+    width: 30%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    box-shadow: 5px 5px 17px 5px #000000;
+    background-color: black;
+}
+
+#display{
+    border: 2px solid black;
+    align-self: center;
+    flex-grow: 1;
+    width: 97%;
+    background-color: whitesmoke;
+    margin: 0.2rem;
+    border-radius: 4px;
+}
+
+#temp{
+    text-align: end;
+    padding-right: 1rem;
+    font-size: 25px;
+}
+
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+button{
+    flex-grow:1;
+    margin: 0.2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    touch-action: manipulation;
+}
+button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }
